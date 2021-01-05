@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.cyberneid.eidonsdk.example"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // blah blah
+            matchingFallbacks = ['release']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    // parse
+    implementation "com.github.parse-community.Parse-SDK-Android:parse:1.24.1"
+    implementation "com.github.parse-community.Parse-SDK-Android:fcm:1.24.1"
+
+    // firebase
+    implementation 'com.google.firebase:firebase-core:17.2.0'
+    implementation 'com.google.firebase:firebase-messaging:19.0.0'
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+
+    implementation 'com.chaos.view:pinview:1.4.2'
+    implementation files ('libs/textview-rich-drawable-release.aar')
+    implementation files ('libs/lib_eidonsdk_1.2.0.aar')
+    implementation files ('libs/openCVLibrary343-release.aar')
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.amazonaws:aws-android-sdk-rekognition:2+'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'org.slf4j:slf4j-api:1.7.21'
+    implementation 'com.itextpdf:itextpdf:5.5.13'
+    implementation 'com.rmtheis:tess-two:6.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation('org.jmrtd:jmrtd:0.7.19') {
+        exclude(group: 'org.bouncycastle', module: 'bcprov-jdk15on')
+    }
+    implementation 'net.sf.scuba:scuba-sc-android:+'
+    implementation 'com.microsoft.projectoxford:face:1.4.4'
+    implementation 'org.bouncycastle:bcpkix-jdk15on:1.56'
+    implementation 'com.google.android.gms:play-services-vision:16+'
+    implementation 'com.github.instacart.truetime-android:library:+'
+    implementation 'it.sephiroth.android.exif:library:+'
+  //  implementation 'com.cyberneid:lib_eidonsdk_1.2.0@aar'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+
+    api 'com.madgag.spongycastle:core:1.58.0.0'
+    api 'com.madgag.spongycastle:bcpkix-jdk15on:1.58.0.0'
+    api 'com.madgag.spongycastle:prov:1.58.0.0'
+}
