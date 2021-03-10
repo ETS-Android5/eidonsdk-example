@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "670599335131",
+    "firebase_url": "https://eidon-sdk.firebaseio.com",
+    "project_id": "eidon-sdk",
+    "storage_bucket": "eidon-sdk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670599335131:android:64d86bca90e3446e06d0fe",
+        "android_client_info": {
+          "package_name": "com.cyberneid.eidon.sdk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670599335131-hou66jhgki3asbe37k254u3raihh04lt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDELOrU9IVap72euQnWCYQov2-4t8NqXh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670599335131-hou66jhgki3asbe37k254u3raihh04lt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
