@@ -3,9 +3,12 @@ package com.cyberneid.eidonsdk.example;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +22,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final String LOGTAG = "MainActivity";
@@ -31,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_GENERATE_IDENTITY = 40;
     private static final int REQUEST_SIGN_PDF = 50;
     TextView textView;
+    ImageView imageView;
 
     Citizen citizen;
 
@@ -40,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.textView);
+        imageView = findViewById(R.id.imageView);
     }
 
     @Override
@@ -161,6 +171,22 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(LOGTAG, "mrz " + mrz.toString());
 
                     textView.setText(mrz.toString());
+
+                    String imagePath = data.getStringExtra(Constants.EXTRA_IMAGE_ID_PATH);
+                    Log.d(LOGTAG, "imagePath " + imagePath);
+
+                    try
+                    {
+                        InputStream ins = new FileInputStream(imagePath);
+                        Bitmap bitmap = BitmapFactory.decodeStream(ins);
+                        ins.close();
+
+                        imageView.setImageBitmap(bitmap);
+                    }
+                    catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
                     break;
 
                 case REQUEST_CAPTURE_MRZ_FULL:
@@ -171,6 +197,23 @@ public class MainActivity extends AppCompatActivity {
 
                     Log.d(LOGTAG, "citizen" + citizen.toString());
                     textView.setText(citizen.toString());
+
+                    imagePath = data.getStringExtra(Constants.EXTRA_IMAGE_ID_PATH);
+                    Log.d(LOGTAG, "imagePath " + imagePath);
+
+                    try
+                    {
+                        InputStream ins = new FileInputStream(imagePath);
+                        Bitmap bitmap = BitmapFactory.decodeStream(ins);
+                        ins.close();
+
+                        imageView.setImageBitmap(bitmap);
+                    }
+                    catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+
                     break;
 
                 case REQUEST_AUTHENTICATION:
@@ -185,6 +228,23 @@ public class MainActivity extends AppCompatActivity {
 
                     Log.d(LOGTAG, "citizen" + citizen.toString());
                     textView.setText(citizen.toString());
+
+                    imagePath = data.getStringExtra(Constants.EXTRA_IMAGE_ID_PATH);
+                    Log.d(LOGTAG, "imagePath " + imagePath);
+
+                    try
+                    {
+                        InputStream ins = new FileInputStream(imagePath);
+                        Bitmap bitmap = BitmapFactory.decodeStream(ins);
+                        ins.close();
+
+                        imageView.setImageBitmap(bitmap);
+                    }
+                    catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+
                     break;
 
                 case REQUEST_GENERATE_IDENTITY:
@@ -198,6 +258,23 @@ public class MainActivity extends AppCompatActivity {
 
                     Log.d(LOGTAG, "citizen" + citizen.toString());
                     textView.setText(citizen.toString());
+
+                    imagePath = data.getStringExtra(Constants.EXTRA_IMAGE_ID_PATH);
+                    Log.d(LOGTAG, "imagePath " + imagePath);
+
+                    try
+                    {
+                        InputStream ins = new FileInputStream(imagePath);
+                        Bitmap bitmap = BitmapFactory.decodeStream(ins);
+                        ins.close();
+
+                        imageView.setImageBitmap(bitmap);
+                    }
+                    catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+
                     break;
 
                 case REQUEST_SIGN_PDF:

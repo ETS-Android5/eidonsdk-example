@@ -52,7 +52,7 @@ dependencies {
 
     implementation 'com.chaos.view:pinview:1.4.2'
     implementation files ('libs/textview-rich-drawable-release.aar')
-    implementation files ('libs/lib_eidonsdk_1.2.13.aar')
+    implementation files ('libs/lib_eidonsdk_1.2.14.aar')
     implementation files ('libs/openCVLibrary343-release.aar')
 
     implementation 'com.github.bumptech.glide:glide:4.9.0'
@@ -82,4 +82,7 @@ dependencies {
     api 'com.madgag.spongycastle:core:1.58.0.0'
     api 'com.madgag.spongycastle:bcpkix-jdk15on:1.58.0.0'
     api 'com.madgag.spongycastle:prov:1.58.0.0'
+
+    implementation "androidx.security:security-crypto:1.0.0-rc01"
+
 }
