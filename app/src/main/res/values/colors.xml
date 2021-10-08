@@ -1,11 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#9BB6AE</color>
-    <color name="colorPrimaryDark">#7B9A98</color>
-    <color name="colorAccent">#405247</color>
-    <color name="textColorPrimary">#FFFFFF</color>
-    <color name="dialogTextColorPrimary">#444444</color>
-    <color name="backgroundColor">#7B9A98</color>
-    <color name="windowBackground">#7B9A98</color>
+
+
+    <!--
+        colorPrimary – The color of the app bar.
+        colorPrimaryDark – The color of the status bar and contextual app bars; this is normally a dark version of colorPrimary.
+        colorAccent – The color of UI controls such as check boxes, radio buttons, and edit text boxes.
+        windowBackground – The color of the screen background.
+        textColorPrimary – The color of UI text in the app bar.
+        statusBarColor – The color of the status bar.
+        navigationBarColor – The color of the navigation bar.
+     -->
+    <color name="colorPrimary">#F3F4F6</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#6266F1</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="textColorPrimary">#333333</color>
+
+    <color name="dialogTextColorPrimary">#FFFFFF</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="backgroundColorSecondary">#F3F4F6</color>
+
     <color name="buttonTextColor">#FFFFFF</color>
+
+    <color name="topCellBackgroundColor">#92A599</color>
+    <color name="midCellBackgroundColor">#7B9A98</color>
+    <color name="bottomCellManagerBackgroundColor">#5E7E83</color>
+    <color name="midCellBackgroundColorSemiTransparent">#807B9A98</color>
+
+    <color name="colorTextToolBar">#4976AD</color>
+    <color name="splashScreenStartColor">#51A8CE</color>
+    <color name="splashScreenEndColor">#314480</color>
+    <color name="digitalSignatureBackgroundGray">#D6D6D6</color>
+    <color name="digitalSignatureBackgroundColor">#52ACD1</color>
+    <color name="certificateBackgroundGray">#CDCDCD</color>
+    <color name="certificateBackgroundColor">#4976AD</color>
+    <color name="pinManagerBackgroundGray">#C6C6C6</color>
+    <color name="pinManagerBackgroundColor">#366195</color>
+    <color name="settingsBackground">#31447F</color>
+    <color name="fontGray">#A0A0A0</color>
+    <color name="colorControl">#A0A0A0</color>
+    <color name="fontColor">#FFFFFF</color>
+    <color name="fontPinManager">#4976AD</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="verificationOk">#00900c</color>
+    <color name="verificationNok">#F0202c</color>
+    <color name="semitransparentBlack">#b0000000</color> <!-- result view background color -->
+
+    <color name="backgroundColorScanHelp">#50FFFFFF</color>
+    <color name="help_button_view">#ffcccccc</color> <!-- activity_help button view background color -->
+    <color name="help_view">#ff404040</color> <!-- background color for entire activity_help view -->
+    <color name="result_minor_text">#ffc0c0c0</color> <!-- source language text/label text color. For example, "OCR English" -->
+    <color name="result_text">#ffFFFFFF</color> <!-- OCR result text color -->
+    <color name="result_view">#b0000000</color> <!-- result view background color -->
+    <color name="status_text">#ffffffff</color> <!-- status_view_top/status_view_bottom text color -->
+    <color name="status_top_text_background">#ffffffff</color> <!-- status_view_top text background color -->
+    <color name="translation_text">#00ccff</color> <!-- translation text color -->
+    <color name="viewfinder_corners">#ffffffff</color> <!-- four corner elements for viewfinder -->
+    <color name="viewfinder_frame">#ffd6d6d6</color> <!-- viewfinder rectangle -->
+    <color name="viewfinder_mask">#60000000</color>  <!-- viewfinder exterior darkened area -->
 </resources>
